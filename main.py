@@ -26,17 +26,15 @@ amount_Dollar = soup.find_all("span", {"class": "f-value"})[0].text.replace("\n"
 amount_Euro = soup.find_all("span", {"class": "f-value"})[1].text.replace("\n", "").strip()
 amount_AUX = soup.find_all("span", {"class": "f-value"})[2].text.replace("\n", "").strip()
 
-api.update_status('Updating using OAuth authentication via Tweepy!')
-
-#while i == 0: 
+while i == 0: 
     
-    #current = datetime.now()
-    #exact_time = current.strftime("%H:%M:%S")
-    #minute = current.strftime("%M")
+    current = datetime.now()
+    exact_time = current.strftime("%H:%M:%S")
+    minute = current.strftime("%M")
 
-    #if(minute == '00' or minute == '15' or minute == '45' or minute == '30'):
-        #print('Time: {}' .format(exact_time))
-        #print('Dolar Rate: {}' .format(amount_Dollar))
-        #print('Euro Rate: {}' .format(amount_Euro))
-        #print('AUX Rate: {}\n' .format(amount_AUX))
-        #time.sleep(delay)
+    if(minute == '00' or minute == '15' or minute == '45' or minute == '30'):
+        print('Time: {}' .format(exact_time))
+        print('Dolar Rate: {}' .format(amount_Dollar))
+        print('Euro Rate: {}' .format(amount_Euro))
+        print('AUX Rate: {}\n' .format(amount_AUX))
+        time.sleep(delay)
